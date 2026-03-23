@@ -180,6 +180,84 @@ footer{
   .grid{grid-template-columns:1fr}
   .hero h1{font-size:30px}
 }
+
+/* Contact Layout */
+.contact {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 22px;
+  padding: 20px;
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(79,209,197,0.08), rgba(139,92,246,0.08));
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+/* Card */
+.card {
+  background: rgba(255,255,255,0.03);
+  border-radius: 16px;
+  padding: 16px;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* Form */
+.travel-form {
+  display: grid;
+  gap: 12px;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Inputs */
+.travel-form input,
+.travel-form select,
+.travel-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(7,11,28,0.6);
+  color: #e7ecff;
+}
+
+.travel-form textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+/* Button */
+.submit-btn {
+  background: linear-gradient(120deg, #4fd1c5, #8b5cf6);
+  color: #0b1026;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Info box */
+.info-box ul {
+  padding-left: 18px;
+}
+
+.note {
+  font-size: 12px;
+  color: #8da0c8;
+  margin-top: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact {
+    grid-template-columns: 1fr;
+  }
+}
+
 </style>
 
 <body>
@@ -259,6 +337,118 @@ footer{
 
 </main>
 
+<main class="container">
+  <section class="section">
+    <h2>Top destinations</h2>
+    <div class="grid">
+      <!-- Repeatable destination cards -->
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1200&auto=format&fit=crop" alt="Maldives">
+        <div class="card-body">
+          <h3 class="card-title">Maldives</h3>
+          <div class="meta"><span>Best: Nov–Apr</span>•<span>Beach</span></div>
+          <div class="card-actions">
+            <a class="btn" href="packages.html?dest=maldives">View Packages</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad?q=80&w=1200&auto=format&fit=crop" alt="Japan">
+        <div class="card-body">
+          <h3 class="card-title">Japan</h3>
+          <div class="meta"><span>Best: Mar–May</span>•<span>Cultural</span></div>
+          <div class="card-actions">
+            <a class="btn" href="packages.html?dest=japan">View Packages</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?q=80&w=1200&auto=format&fit=crop" alt="New Zealand">
+        <div class="card-body">
+          <h3 class="card-title">New Zealand</h3>
+          <div class="meta"><span>Best: Oct–Mar</span>•<span>Adventure</span></div>
+          <div class="card-actions">
+            <a class="btn" href="packages.html?dest=nz">View Packages</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
+
+<section id="contact" class="section container">
+  <h2>Plan your trip</h2>
+  <p class="lead">
+    Tell us a bit about your travel style. We’ll tailor an itinerary and get back within 24 hours.
+  </p>
+
+  <div class="contact">
+    <div class="card">
+      <form class="travel-form">
+        <div class="row">
+          <input type="text" name="name" placeholder="Full name" required />
+          <input type="email" name="email" placeholder="Email address" required />
+        </div>
+
+        <div class="row">
+          <select name="trip" required>
+            <option value="">Trip type</option>
+            <option>Leisure</option>
+            <option>Adventure</option>
+            <option>Honeymoon</option>
+            <option>Family</option>
+            <option>Custom</option>
+          </select>
+
+          <input type="text" name="dates" placeholder="Preferred dates" />
+        </div>
+
+        <textarea name="message" placeholder="Where do you want to go? Any must-do experiences?"></textarea>
+
+        <button type="submit" class="submit-btn">Request itinerary</button>
+      </form>
+    </div>
+
+    <div class="card info-box">
+      <h3>What’s included</h3>
+      <ul>
+        <li>Curated stays and transfers</li>
+        <li>Local expert guides</li>
+        <li>Flexible add-ons and upgrades</li>
+        <li>24×7 on-trip support</li>
+      </ul>
+      <p class="note">
+        By submitting, you agree to be contacted regarding your inquiry.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<main class="container">
+  <section class="section">
+    <h2>Our story</h2>
+    <div class="hero-card">
+      <p class="muted">We’re a Port Blair–born team crafting effortless travel with curated stays, reliable partners, and transparent pricing.</p>
+      <div class="grid">
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title">Why choose us</h3>
+            <p class="muted">Concierge planning, vetted experiences, and responsive support from inquiry to return.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title">Sustainability</h3>
+            <p class="muted">We prioritize local guides, eco‑friendly stays, and low‑impact itineraries.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+
 <!-- FOOTER -->
 <footer>
   <div class="container footer-wrap">
@@ -279,6 +469,7 @@ footer{
       <p>Contact</p>
     </div>
   </div>
+
 
   <div class="container copy">
     <b></b>© 2026 Sony Andaman Tour & Travels</b>
