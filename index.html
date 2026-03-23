@@ -11,9 +11,8 @@
 
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <style>
-/* styles.css */
-/* Premium travel feel: soft dark, warm gradient accents, elegant typography */
 :root{
   --bg:#0f1320;
   --card:#151a2c;
@@ -33,204 +32,258 @@ img{max-width:100%;display:block;border-radius:12px}
 a{color:inherit;text-decoration:none}
 .container{max-width:1200px;margin:0 auto;padding:0 20px}
 
+/* HEADER */
 header{
-  position:sticky;top:0;z-index:50;background:rgba(15,19,32,.8);
-  backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid rgba(255,255,255,.06)
+  position:sticky;
+  top:0;
+  z-index:50;
+  background:rgba(15,19,32,.8);
+  backdrop-filter:saturate(140%) blur(10px);
+  border-bottom:1px solid rgba(255,255,255,.06)
 }
-.nav{
-  display:flex;align-items:center;justify-content:space-between;height:72px
-}
-.brand{
-  display:flex;align-items:center;gap:12px;font-weight:700;letter-spacing:.3px
-}
-.brand .logo{
-  width:36px;height:36px;border-radius:10px;background:var(--grad);box-shadow:var(--shadow)
-}
-.nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0}
-.nav a{padding:10px 14px;border-radius:10px;transition:.25s}
-.nav a:hover{background:rgba(255,255,255,.06)}
-.cta{
-  background:var(--grad);color:#0b1020;padding:10px 16px;border-radius:12px;font-weight:600;
-  box-shadow:var(--shadow);border:0;cursor:pointer
-}
-.menu-btn{display:none;background:none;border:0;color:var(--text);font-size:24px}
 
-.hero{
-  text-align: center;display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center;padding:48px 0
+.nav{
+  display:flex;
+  align-items:center;
+  justify-content:center; /* Centered since no nav links */
+  height:72px;
 }
+
+/* BRAND */
+.brand-link{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.logo{
+  width:40px;
+  height:40px;
+  border-radius:10px;
+  object-fit:cover;
+}
+
+.title{
+  font-size:20px;
+  font-weight:700;
+  margin:0;
+  white-space:nowrap;
+}
+
+/* HERO */
+.hero{
+  text-align:center;
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:28px;
+  align-items:center;
+  padding:48px 0
+}
+
 .hero-card{
   background:radial-gradient(1200px 600px at 10% 10%,rgba(110,231,255,.08),transparent 70%),
              radial-gradient(1200px 600px at 90% 90%,rgba(245,158,11,.08),transparent 90%),
              var(--card);
-  border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow)
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:var(--radius);
+  padding:28px;
+  box-shadow:var(--shadow)
 }
-.hero h1{font-size:42px;line-height:1.1;margin:0 0 12px}
-.hero p{color:var(--muted);margin:0 0 20px}
-.search{
-  display:flex;gap:12px;flex-wrap:wrap;margin-top:10px
-}
-.input,select{
-  text-align: center;
-  background:#0c1020;border:1px solid rgba(255,255,255,.1);color:var(--text);
-  padding:12px 14px;border-radius:12px;min-width:220px;outline:none
-}
-.input:focus,select:focus{border-color:var(--ring);box-shadow:0 0 0 3px rgba(59,130,246,.25)}
-.btn{
-  background:var(--brand);color:#041020;border:0;padding:12px 16px;border-radius:12px;font-weight:600;cursor:pointer
-}
-.btn.secondary{background:#1f2438;color:var(--text);border:1px solid rgba(255,255,255,.1)}
+
+.hero h1{font-size:42px;margin:0 0 12px}
+.hero p{color:var(--muted)}
+
 .section{text-align:center;padding:36px 0}
-.section h2{margin:0 0 16px;text-align:center;font-size:28px}
+.section h2{margin-bottom:16px;font-size:28px}
+
 .grid{
-  display:grid;grid-template-columns:repeat(3,1fr);gap:20px
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px
 }
+
 .card{
-  text-align:center;background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);
-  overflow:hidden;box-shadow:var(--shadow);transition:transform .25s,box-shadow .25s
+  background:var(--card);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  overflow:hidden;
+  transition:.25s
 }
-.card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.45)}
-.card-body{padding:16px}
-.card-title{font-weight:700;margin:0 0 6px}
-.meta{display:flex;gap:10px;color:var(--muted);font-size:14px;margin-bottom:10px}
-.price{font-weight:700;text-align:center;color:var(--accent)}
-.card-actions{display:flex;gap:30px;margin-top:10px}
-.tag{
-  display:inline-block;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);
-  padding:6px 10px;border-radius:999px;font-size:12px;color:var(--muted)
+
+.card:hover{transform:translateY(-4px)}
+
+.card-body{padding:16px;text-align:center}
+
+.card-title{font-weight:700}
+
+.meta{color:var(--muted);font-size:14px}
+
+.price{font-weight:700;color:var(--accent)}
+
+.card-actions{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  margin-top:10px
+}
+
+.btn{
+  background:var(--brand);
+  padding:10px 14px;
+  border-radius:10px;
+  border:0;
+  cursor:pointer;
+  font-weight:600;
+  color:#041020;
+}
+
+.btn.secondary{
+  background:#1f2438;
+  color:#fff;
 }
 
 .banner{
-  background:var(--grad);border-radius:var(--radius);padding:18px;color:#0b1020;font-weight:600
+  background:var(--grad);
+  padding:18px;
+  border-radius:var(--radius);
+  color:#000;
+  font-weight:600
 }
 
+/* FOOTER */
 footer{
-  text-align:center;margin-top:40px;border-top:1px solid rgba(255,255,255,.08);background:#0c1020
+  text-align:center;
+  margin-top:40px;
+  background:#0c1020;
 }
-.footer-wrap{display:grid;grid-template-columns:2fr 1fr 1fr;gap:20px;padding:28px 0}
-.footer-wrap h4{margin:0 0 10px}
-.footer-wrap a{color:var(--muted)}
-.copy{color:var(--muted);padding:16px 0;border-top:1px solid rgba(255,255,255,.06);font-size:14px}
 
+.footer-wrap{
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr;
+  gap:20px;
+  padding:28px 0
+}
+
+.copy{
+  color:var(--muted);
+  padding:16px 0;
+  font-size:14px
+}
+
+/* RESPONSIVE */
 @media (max-width:980px){
   .hero{grid-template-columns:1fr}
   .grid{grid-template-columns:repeat(2,1fr)}
 }
+
 @media (max-width:640px){
-  .nav ul{display:none}
-  .menu-btn{display:block}
   .grid{grid-template-columns:1fr}
-  .hero h1{font-size:34px}
+  .hero h1{font-size:30px}
 }
 </style>
+
 <body>
 
-  <!-- Header -->
-  <header>
-    <div class="container nav">
-      <div class="brand">
-        <a href="index.html" class="brand-link">
-          <img src="logo.png" alt="Sony Andaman Tour & Travels Logo" class="logo">
-          <h2 class="title">Sony Andaman Tour & Travels</h2>
-        </a>
-      </div>
+<!-- HEADER -->
+<header>
+  <div class="container nav">
+    <a href="index.html" class="brand-link">
+      <img src="logo.png" alt="Logo" class="logo">
+      <h2 class="title">Sony Andaman Tour & Travels</h2>
+    </a>
+  </div>
+</header>
 
-      <button class="menu-btn" aria-label="Menu" onclick="toggleMenu()">☰</button>
+<!-- MAIN -->
+<main class="container">
 
-      <ul id="navLinks">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="destinations.html">Destinations</a></li>
-        <li><a href="packages.html">Tour Packages</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a class="cta" href="booking.html">Book Now</a></li>
-      </ul>
+  <section class="hero">
+    <div class="hero-card">
+      <h1>Discover premium tours crafted for comfort and wonder</h1>
+      <p>From tropical escapes to alpine adventures—handpicked itineraries, transparent pricing, and concierge-level care.</p>
     </div>
-  </header>
+    <img src="img3.jpg" alt="">
+    <img src="img6.jpg" alt="">
+  </section>
 
-  <main class="container">
-    <section class="hero">
-      <div class="hero-card">
-        <h1>Discover premium tours crafted for comfort and wonder</h1>
-        <p>From tropical escapes to alpine adventures—handpicked itineraries, transparent pricing, and concierge-level care.</p>
-      </div>
-      <img src="img3.jpg" alt="Travel destination">
-      <img src="img6.jpg" alt="Travel destination">
-    </section>
+  <section class="section">
+    <div class="banner">Limited-time offers: Save up to 20% on spring departures.</div>
+  </section>
 
-    <section class="section">
-      <div class="banner">Limited-time offers: Save up to 20% on spring departures.</div>
-    </section>
+  <section class="section">
+    <h2>Featured packages</h2>
 
-    <section class="section">
-      <h2>Featured packages</h2>
-      <div class="grid">
-        <article class="card">
-          <img src="img5.jpg" alt="Bali Serenity Escape">
-          <div class="card-body">
-            <h3 class="card-title">Bali Serenity Escape</h3>
-            <div class="meta"><span>6 nights</span> • <span>4★ resorts</span></div>
-            <div class="price">₹58,000</div>
-            <div class="card-actions">
-              <a class="btn" href="package.html?id=bali">View Details</a>
-              <a class="btn secondary" href="booking.html?pkg=bali">Book Now</a>
-            </div>
+    <div class="grid">
+
+      <div class="card">
+        <img src="img5.jpg">
+        <div class="card-body">
+          <h3 class="card-title">Bali Serenity Escape</h3>
+          <div class="meta">6 nights • 4★ resorts</div>
+          <div class="price">₹58,000</div>
+          <div class="card-actions">
+            <a class="btn">View</a>
+            <a class="btn secondary">Book</a>
           </div>
-        </article>
+        </div>
+      </div>
 
-        <article class="card">
-          <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=1200&auto=format&fit=crop" alt="Paris">
-          <div class="card-body">
-            <h3 class="card-title">Paris Art & Café Trail</h3>
-            <div class="meta"><span>5 nights</span> • <span>City boutique</span></div>
-            <div class="price">₹92,000</div>
-            <div class="card-actions">
-              <a class="btn" href="package.html?id=paris">View Details</a>
-              <a class="btn secondary" href="booking.html?pkg=paris">Book Now</a>
-            </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=1200">
+        <div class="card-body">
+          <h3 class="card-title">Paris Tour</h3>
+          <div class="meta">5 nights • City stay</div>
+          <div class="price">₹92,000</div>
+          <div class="card-actions">
+            <a class="btn">View</a>
+            <a class="btn secondary">Book</a>
           </div>
-        </article>
+        </div>
+      </div>
 
-        <article class="card">
-          <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1200&auto=format&fit=crop" alt="Swiss Alps">
-          <div class="card-body">
-            <h3 class="card-title">Swiss Alps Panorama</h3>
-            <div class="meta"><span>7 nights</span> • <span>Rail & chalet</span></div>
-            <div class="price">₹1,35,000</div>
-            <div class="card-actions">
-              <a class="btn" href="package.html?id=swiss">View Details</a>
-              <a class="btn secondary" href="booking.html?pkg=swiss">Book Now</a>
-            </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1200">
+        <div class="card-body">
+          <h3 class="card-title">Swiss Alps</h3>
+          <div class="meta">7 nights • Chalet</div>
+          <div class="price">₹1,35,000</div>
+          <div class="card-actions">
+            <a class="btn">View</a>
+            <a class="btn secondary">Book</a>
           </div>
-        </article>
+        </div>
       </div>
-    </section>
-  </main>
 
-  <!-- Footer -->
-  <footer>
-    <div class="container footer-wrap">
-      <div>
-        <h4>Sony Andaman Tour & Travels</h4>
-        <p class="muted">Curated journeys with seamless planning and premium comfort.</p>
-        <div class="tag">IATA Certified</div>
-        <div class="tag">24/7 Support</div>
-      </div>
-      <div>
-        <h4>Explore</h4>
-        <p><a href="destinations.html">Destinations</a></p>
-        <p><a href="packages.html">Packages</a></p>
-        <p><a href="booking.html">Booking</a></p>
-      </div>
-      <div>
-        <h4>Company</h4>
-        <p><a href="about.html">About</a></p>
-        <p><a href="contact.html">Contact</a></p>
-        <p><a href="faq.html">FAQ</a></p>
-      </div>
     </div>
-    <div class="container copy">© 2026 Sony Andaman Tour & Travels. All rights reserved.</div>
-  </footer>
+  </section>
 
-  <script src="script.js"></script>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container footer-wrap">
+    <div>
+      <h4>Sony Andaman Tour & Travels</h4>
+      <p>Premium travel experiences.</p>
+    </div>
+
+    <div>
+      <h4>Explore</h4>
+      <p>Packages</p>
+      <p>Booking</p>
+    </div>
+
+    <div>
+      <h4>Company</h4>
+      <p>About</p>
+      <p>Contact</p>
+    </div>
+  </div>
+
+  <div class="container copy">
+    © 2026 Sony Andaman Tour & Travels
+  </div>
+</footer>
+
 </body>
 </html>
