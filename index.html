@@ -157,16 +157,63 @@ header{
 
 /* FOOTER */
 footer{
-  text-align:center;
+  padding:30px 0;
   margin-top:40px;
-  background:#0c1020;
+  background:rgba(255,255,255,0.03);
+  border-top:1px solid rgba(255,255,255,0.08);
 }
 
-.footer-wrap{
+.footer-grid{
   display:grid;
   grid-template-columns:2fr 1fr 1fr;
   gap:20px;
-  padding:28px 0
+}
+
+.footer-title{
+  font-weight:700;
+  margin-bottom:10px;
+}
+
+.footer-link{
+  display:block;
+  margin:6px 0;
+  color:var(--muted);
+  font-size:14px;
+}
+
+.footer-link:hover{
+  color:var(--accent);
+}
+
+.social{
+  display:flex;
+  gap:10px;
+  margin-top:10px;
+}
+
+.social a{
+  padding:8px 10px;
+  border-radius:10px;
+  border:1px solid rgba(255,255,255,0.15);
+  font-size:13px;
+}
+
+.footer-bottom{
+  text-align:center;
+  margin-top:20px;
+  font-size:14px;
+  color:var(--muted);
+}
+
+/* Responsive */
+@media (max-width:768px){
+  .footer-grid{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+  .social{
+    justify-content:center;
+  }
 }
 
 .copy{
@@ -350,7 +397,7 @@ footer{
       <article class="card">
         <img src="img1.jpeg" alt="Destination Image">
         <div class="card-body">
-          <h3 class="card-title">Maldives</h3>
+          <h3 class="card-title">Cellular Jail</h3>
           <div class="meta"><span>Best: Nov–Apr</span>•<span>Beach</span></div>
           <div class="card-actions">
             <a class="btn" href="packages.html?dest=maldives">View Packages</a>
@@ -360,7 +407,7 @@ footer{
       <article class="card">
         <img src="img2.jpeg" alt="Destination Image">
         <div class="card-body">
-          <h3 class="card-title">Japan</h3>
+          <h3 class="card-title">Light & Sound Show</h3>
           <div class="meta"><span>Best: Mar–May</span>•<span>Cultural</span></div>
           <div class="card-actions">
             <a class="btn" href="packages.html?dest=japan">View Packages</a>
@@ -370,7 +417,7 @@ footer{
       <article class="card">
         <img src="img3.jpeg" alt="Destination Image">
         <div class="card-body">
-          <h3 class="card-title">New Zealand</h3>
+          <h3 class="card-title">Ross Island</h3>
           <div class="meta"><span>Best: Oct–Mar</span>•<span>Adventure</span></div>
           <div class="card-actions">
             <a class="btn" href="packages.html?dest=nz">View Packages</a>
@@ -380,7 +427,7 @@ footer{
       <article class="card">
         <img src="img4.jpeg" alt="Destination Image">
         <div class="card-body">
-          <h3 class="card-title">New Zealand</h3>
+          <h3 class="card-title">Radhanagar Beach(Havelock)</h3>
           <div class="meta"><span>Best: Oct–Mar</span>•<span>Adventure</span></div>
           <div class="card-actions">
             <a class="btn" href="packages.html?dest=nz">View Packages</a>
@@ -390,7 +437,7 @@ footer{
     <article class="card">
         <img src="img5.jpeg" alt="Destination Image">
         <div class="card-body">
-          <h3 class="card-title">New Zealand</h3>
+          <h3 class="card-title">Limestone Cave(Baratang)</h3>
           <div class="meta"><span>Best: Oct–Mar</span>•<span>Adventure</span></div>
           <div class="card-actions">
             <a class="btn" href="packages.html?dest=nz">View Packages</a>
@@ -400,7 +447,7 @@ footer{
     <article class="card">
         <img src="img6.jpeg" alt="Destination Image">
         <div class="card-body">
-          <h3 class="card-title">New Zealand</h3>
+          <h3 class="card-title">Carbyn's Cove Beach</h3>
           <div class="meta"><span>Best: Oct–Mar</span>•<span>Adventure</span></div>
           <div class="card-actions">
             <a class="btn" href="packages.html?dest=nz">View Packages</a>
@@ -410,7 +457,7 @@ footer{
     <article class="card">
         <img src="img7.jpeg" alt="Destination Image">
         <div class="card-body">
-          <h3 class="card-title">New Zealand</h3>
+          <h3 class="card-title">Barren Island</h3>
           <div class="meta"><span>Best: Oct–Mar</span>•<span>Adventure</span></div>
           <div class="card-actions">
             <a class="btn" href="packages.html?dest=nz">View Packages</a>
@@ -420,7 +467,7 @@ footer{
     <article class="card">
         <img src="img8.jpeg" alt="Destination Image">
         <div class="card-body">
-          <h3 class="card-title">New Zealand</h3>
+          <h3 class="card-title">Natural Bridge(Neil Island)</h3>
           <div class="meta"><span>Best: Oct–Mar</span>•<span>Adventure</span></div>
           <div class="card-actions">
             <a class="btn" href="packages.html?dest=nz">View Packages</a>
@@ -430,7 +477,7 @@ footer{
     <article class="card">
         <img src="img9.jpeg" alt="Destination Image">
         <div class="card-body">
-          <h3 class="card-title">New Zealand</h3>
+          <h3 class="card-title">Elephanta Beach(Havelock)</h3>
           <div class="meta"><span>Best: Oct–Mar</span>•<span>Adventure</span></div>
           <div class="card-actions">
             <a class="btn" href="packages.html?dest=nz">View Packages</a>
@@ -440,7 +487,7 @@ footer{
     <article class="card">
         <img src="img10.jpeg" alt="Destination Image">
         <div class="card-body">
-          <h3 class="card-title">New Zealand</h3>
+          <h3 class="card-title">Bharatpur Beach(Neil Island)</h3>
           <div class="meta"><span>Best: Oct–Mar</span>•<span>Adventure</span></div>
           <div class="card-actions">
             <a class="btn" href="packages.html?dest=nz">View Packages</a>
@@ -450,7 +497,7 @@ footer{
     <article class="card">
         <img src="img11.jpeg" alt="Destination Image">
         <div class="card-body">
-          <h3 class="card-title">New Zealand</h3>
+          <h3 class="card-title">Lakshmanpur Beach(Neil Island)</h3>
           <div class="meta"><span>Best: Oct–Mar</span>•<span>Adventure</span></div>
           <div class="card-actions">
             <a class="btn" href="packages.html?dest=nz">View Packages</a>
@@ -536,28 +583,42 @@ footer{
 
 <!-- FOOTER -->
 <footer>
-  <div class="container footer-wrap">
+  <div class="container footer-grid">
+
+    <!-- Company -->
     <div>
-      <h4>Sony Andaman Tour & Travels</h4>
-      <p>Curated journeys with seamless planning of Andaman & Nicobar island tours.</p>
+      <h3 class="footer-title">Auro Tours & Travels</h3>
+      <p class="footer-link">
+        Crafting unforgettable journeys with seamless planning and local expertise.
+      </p>
+
+      <div class="social">
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">YouTube</a>
+      </div>
     </div>
 
+    <!-- Explore -->
     <div>
-      <h4>Explore</h4>
-      <p>Packages</p>
-      <p>Booking</p>
+      <h3 class="footer-title">Explore</h3>
+      <a href="#destinations" class="footer-link">Destinations</a>
+      <a href="gallery.html" class="footer-link">Gallery</a>
+      <a href="#contact" class="footer-link">Contact</a>
     </div>
 
+    <!-- Contact -->
     <div>
-      <h4>Company</h4>
-      <p>About</p>
-      <p>Contact</p>
+      <h3 class="footer-title">Contact</h3>
+      <div class="footer-link">📞 +91 90000 00000</div>
+      <div class="footer-link">📧 hello@aurotours.com</div>
+      <div class="footer-link">📍 Port Blair, Andaman</div>
     </div>
+
   </div>
 
-
-  <div class="container copy">
-    <b></b>© 2026 Sony Andaman Tour & Travels</b>
+  <div class="footer-bottom">
+    © 2026 Auro Tours & Travels — All Rights Reserved
   </div>
 </footer>
 
